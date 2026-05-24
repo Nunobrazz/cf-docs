@@ -4,6 +4,8 @@ description: "Release notes and version history for Global Synchronizer software
 ---
 
 import ExternalSpliceMainSpliceRstCodeDocsSrcReleaseNotesYaml192 from "/snippets/external/splice/main/splice-rst-code-docs-src-release-notes-yaml-192.mdx";
+import ExternalSpliceMainSpliceRstCodeDocsSrcReleaseNotesPython738 from "/snippets/external/splice/main/splice-rst-code-docs-src-release-notes-python-738.mdx";
+import ExternalSpliceMainSpliceRstCodeDocsSrcReleaseNotesPython747 from "/snippets/external/splice/main/splice-rst-code-docs-src-release-notes-python-747.mdx";
 
 {/* COPIED_START source="splice:docs/src/release_notes.rst" hash="b9660f66" */}
 
@@ -422,20 +424,11 @@ The value for `idle-timeout` should be set lower than timeouts in the network st
 
     Participant config:
 
-    ```python
-    canton.participants.participant.sequencer-client.keep-alive-client.idle-timeout = 5 minutes
-    # And / Or
-    canton.participants.participant.sequencer-client.keep-alive-client.keep-alive-without-calls = true
-    canton.participants.participant.sequencer-client.keep-alive-client.keep-alive-time = 6 minutes
-    ```
+    <ExternalSpliceMainSpliceRstCodeDocsSrcReleaseNotesPython738 />
 
     Sequencer config:
 
-    ```python
-    # Must be enabled if keep-alive-without-calls is enabled on the client side
-    canton.sequencers.sequencer.public-api.keep-alive-server.permit-keep-alive-without-calls = true
-    canton.sequencers.sequencer.public-api.keep-alive-server.permit-keep-alive-time = 5 minutes
-    ```
+    <ExternalSpliceMainSpliceRstCodeDocsSrcReleaseNotesPython747 />
 
     - Lowered the log level of certain warnings to INFO level, if validation of the confirmation request or confirmation response failed due to a race with a topology change.
 
