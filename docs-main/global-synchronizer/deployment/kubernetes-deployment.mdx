@@ -8,6 +8,7 @@ import ExternalSpliceMainSpliceRstFullDocsSrcCommonReloaderRecommendation from '
 import ExternalSpliceMainSpliceRstCodeDocsSrcSvOperatorSvHelmBash1033 from "/snippets/external/splice/main/splice-rst-code-docs-src-sv-operator-sv-helm-bash-1033.mdx";
 import ExternalSpliceMainSpliceRstCodeDocsSrcSvOperatorSvHelmBash39 from "/snippets/external/splice/main/splice-rst-code-docs-src-sv-operator-sv-helm-bash-39.mdx";
 import ExternalSpliceMainSpliceRstCodeDocsSrcSvOperatorSvHelmParsedLiteral354 from "/snippets/external/splice/main/splice-rst-code-docs-src-sv-operator-sv-helm-parsed-literal-354.mdx";
+import ExternalSpliceMainSpliceRstCodeDocsSrcSvOperatorSvHelmParsedLiteral468 from "/snippets/external/splice/main/splice-rst-code-docs-src-sv-operator-sv-helm-parsed-literal-468.mdx";
 import ExternalSpliceMainSpliceRstCodeDocsSrcSvOperatorSvHelmParsedLiteral528 from "/snippets/external/splice/main/splice-rst-code-docs-src-sv-operator-sv-helm-parsed-literal-528.mdx";
 import ExternalSpliceMainSpliceRstCodeDocsSrcSvOperatorSvHelmParsedLiteral691 from "/snippets/external/splice/main/splice-rst-code-docs-src-sv-operator-sv-helm-parsed-literal-691.mdx";
 import ExternalSpliceMainSpliceRstCodeDocsSrcSvOperatorSvHelmParsedLiteral701 from "/snippets/external/splice/main/splice-rst-code-docs-src-sv-operator-sv-helm-parsed-literal-701.mdx";
@@ -314,21 +315,7 @@ The default behavior is restored by undoing above changes.
 
 To confirm the current configuration of your SV participant, open a Canton console to it and execute `participant.synchronizers.config("global")`. In case BFT sequencer connections are disabled, this should return a single sequencer connection in an output similar to the following:
 
-```haskell
-@ participant.synchronizers.config("global")
-res1: Option[SynchronizerConnectionConfig] = Some(
-  value = SynchronizerConnectionConfig(
-    synchronizer = Synchronizer \'global\',
-    sequencerConnections = SequencerConnections(
-      connections = Sequencer \'DefaultSequencer\' -> GrpcSequencerConnection(sequencerAlias = Sequencer \'DefaultSequencer\', endpoints = http://global-domain-0-sequencer:5008),
-      sequencer trust threshold = 1,
-      submission request amplification = SubmissionRequestAmplification(factor = 1, patience = 10s)
-    ),
-    manualConnect = false,
-    timeTracker = SynchronizerTimeTrackerConfig(minObservationDuration = 30m)
-  )
-)
-```
+<ExternalSpliceMainSpliceRstCodeDocsSrcSvOperatorSvHelmParsedLiteral468 />
 
 Alternatively, you can also search your participant logs for a `DEBUG`-level entry such as `Connecting to synchronizer with config: SynchronizerConnectionConfig(...)`, which contains the same information.
 
